@@ -63,23 +63,23 @@ let copied = {
 
 isEarlier = copied.date < holidays[6].date
 console.log('New date is earlier:', isEarlier)
-if (isEarlier) copied.date = holidays[6].date
 const newId = copied.id != holidays[6].id
 console.log('ID change:', newId)
 console.log('Name change:', copied.name)
 console.log('Date change:', copied.date)
 
-const firstHolidayTimestamp = Math.min(
-    holidays[0].date.getTime,
-    holidays[1].date.getTime,
-    holidays[2].date.getTime,
-    holidays[3].date.getTime,
-    holidays[4].date.getTime,
-    holidays[5].date.getTime,
-    holidays[6].date.getTime,
-    holidays[7].date.getTime,
-    holidays[8].date.getTime,
+const firstHolidayTimestamp = Math.min (
+    holidays[0].date.getDate,
+    holidays[1].date.getDate,
+    holidays[2].date.getDate,
+    holidays[3].date.getDate,
+    holidays[4].date.getDate,
+    holidays[5].date.getDate,
+    holidays[6].date.getDate,
+    holidays[7].date.getDate,
+    holidays[8].date.getDate,
 )
+
 
 const lastHolidayTimestamp = Math.max(
     holidays[0].date.getTime,
@@ -93,13 +93,14 @@ const lastHolidayTimestamp = Math.max(
     holidays[8].date.getTime,
 )
 
-const firstDay = firstHolidayTimestamp.getDate
+// NOT WORKING 
+const firstDay = firstHolidayTimestamp.getDay
 const firstMonth = firstHolidayTimestamp.getMonth
 const lastDay = lastHolidayTimestamp.getDate
 const lastMonth = lastHolidayTimestamp.getMonth
 
-console.log('{firstDay}/{firstMonth}/{currentYear}')
+console.log(`${firstDay}/${firstMonth}/${currentYear}`)
 console.log('{lastDay}/{lastMonth}/{currentYear}')
 
-const randomHoliday = holidays[Math.random]
-console.log(randomHoliday.date)
+const randomHoliday = holidays.date
+console.log(randomHoliday Math.random)
